@@ -3,7 +3,7 @@ library(tidyverse)
 
 years <- 2000:2023
 
-pbp <- nflfastR::load_pbp(years)
+pbp <- load_pbp(years)
 games <- fast_scraper_schedules(years)
 
 score_by_quarter <- pbp %>%
