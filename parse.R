@@ -6,11 +6,6 @@ years <- 2000:2023
 pbp <- nflfastR::load_pbp(years)
 games <- fast_scraper_schedules(years)
 
-
-pbp %>%
-  filter(quarter_seconds_remaining == 0, game_id == "2009_11_NYJ_NE") %>%
-  View()
-
 score_by_quarter <- pbp %>%
   filter(quarter_seconds_remaining == 0, qtr <=4) %>%
   group_by(game_id, qtr) %>%
